@@ -1,0 +1,19 @@
+import Bleed from 'nextra-theme-docs/bleed'
+import Callout from 'nextra-theme-docs/callout'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+
+#### `inv(input: Array)`
+
+**param** `input` a 2d matrix. Should be square and invertible. 
+
+**returns: Array** - The matrix that is the inverse of `input` i.e. `input * input^-1 = I` where `I` is the identity matrix. (recall identity matrix is 1's on the diagonal and 0's elsewhere)
+
+This function simply finds the inverse of a matrix if its invertible. One test for invertible matrices is its invertible if determinant (det) =/= 0 : 
+
+<Bleed full>
+<iframe src="https://hhlab.dev/?code=*import%20math%3Ainv%0A*import%20math%3Adet%0A%0Alet%20a%20%3D%20new%20Mat(%5B%5B2%2C3%2C4%5D%2C%5B2%2C1%2C3%5D%2C%5B2%2C0%2C5%5D%5D)%0A%0Aprint('a%20%3D%20'%2Ba)%0A%0Aprint('Note%20that%20the%20determinant%20is%20'%2Bdet(a))%0A%0A%2F%2FSince%20it's%20non-zero%20and%20square%20it%20will%20be%20invertible%20%3A%20%0A%0Alet%20a_inverse%20%3D%20inv(a)%0A%0Aprint(%22inverse%20of%20a%20%3D%20%22%2Ba_inverse)%3B%0A%0A%2F%2FTry%20it%20with%20a%20matrix%20where%20the%20determinant%20is%20zero!&auto_run=true"
+    width="100%"
+    height="500px">
+  </iframe>
+</Bleed>

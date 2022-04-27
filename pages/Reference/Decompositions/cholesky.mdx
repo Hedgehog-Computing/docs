@@ -1,0 +1,18 @@
+import Bleed from 'nextra-theme-docs/bleed'
+import Callout from 'nextra-theme-docs/callout'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `cholesky(input: any[][])`
+
+**param** `input` - The matrix to decompose using the cholesky method. Needs to be symmetric (hermitian) and positive definite (if the number z^T*M*z > 0 for every non-zero column vector z for M=input, but that's not what we're concerned with).
+
+**returns: any[][]** - The matrix `L` from the decomposition `L*L^T = input`
+
+This function decomposes a positive definite, symmetric (hermitian) matrix using the cholesky method. It returns the `L` part of the decomposition, `L*L^T = A` where `A` would be the input. If the input is not positive definite you will have a exception thrown. 
+
+<Bleed full>
+<iframe src="https://hhlab.dev/?code=%0A*import%20math%3Acholesky%0A*import%20math%3Ais_symmetric%0A*import%20math%3Atranspose%20%0A%0Alet%20a%20%3D%20new%20Mat(%5B%5B4%2C12%2C-16%5D%2C%5B12%2C37%2C-43%5D%2C%20%5B-16%2C-43%2C98%5D%5D)%0Aprint('a%20%3D%20'%2Ba)%0A%0Aprint('Is%20a%20symmetric%3F%20'%20%2B%20is_symmetric(a))%0A%0A%2F%2FNow%20as%20long%20as%20it's%20positive%20definite%20it'll%20successfully%20decompose%20into%20L*L%5ET%20and%20give%20us%20L%20from%20the%20cholesky%20method%3A%0A%0Alet%20a_L%20%3D%20cholesky(a)%3B%0A%0Aprint(%22L%20from%20decomposition%20is%20%3A%20%22%2Ba_L)%0A%0A%2F%2FLets%20check%20to%20see%20if%20it's%20a%20successful%20decomposition!%0Aprint(%22L%20transpose%20is%20%22%2Btranspose(a_L))%0A%0Alet%20llt%20%3D%20a_L*transpose(a_L)%0A%0Aprint('The%20matrix%20L*L%5ET%20%3D%20'%2Bllt)%3B%0A%0A%0A%0A%0A%0A%0A%0A&auto_run=true"
+    width="100%"
+    height="500px">
+  </iframe>
+</Bleed>

@@ -1,0 +1,18 @@
+import Bleed from 'nextra-theme-docs/bleed'
+import Callout from 'nextra-theme-docs/callout'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `trace(input: any[][] | Mat | Tensor)`
+
+**param** `input` - Any JavaScript 2d array, Mat, Tensor. Must be 2d and square though.
+
+**returns: number** - The trace of the matrix.
+
+This function returns the trace of the matrix given. Note that the trace is the sum of the diagonal entries of a matrix. It is useful in certain applications and measurements of matrix properties. 
+
+<Bleed full>
+<iframe src="https://hhlab.dev/?code=*import%20math%3Atrace%0A%0A%2F%2Fshouldn't%20be%20upper%20triangular%2C%20right%3F%0A%0Alet%20a%20%3D%20%5B%5B2%2C3%5D%2C%5B4%2C4%5D%5D%0Aprint('a%20is%20'%20%2Ba)%0A%0A%2F%2Fwe%20expect%20trace%20to%20be%202%2B4%20%3D%206%0A%0Aprint('trace%20of%20a%20is%20'%2Btrace(a))%0A%0A%2F%2Ftry%20it%20for%20bigger%20arrays%2C%20or%20a%20tensor%20or%20Mat%0A%0A&auto_run=true"
+    width="100%"
+    height="500px">
+  </iframe>
+</Bleed>

@@ -1,0 +1,20 @@
+import Bleed from 'nextra-theme-docs/bleed'
+import Callout from 'nextra-theme-docs/callout'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `lusolve(A: any[][], b: any[])`
+
+**param** `A` - The 'A' part of `Ax=b`. A 2d matrix. See `lsolve` or `usolve` for variants.
+
+**param** `b` - The 'b' part of `Ax=b`. A 1d matrix or array, column vector specifically. 
+
+**returns: any[]** - The column vector representing the solution to the equation `Ax=b`, or the part, 'x'. 
+
+This function finds the answer to the equation `Ax=b`, or the linear equation system where x is a column vector of the different variables. 
+
+<Bleed full>
+<iframe src="https://hhlab.dev/?code=%0A*import%20math%3Alusolve%0A%0Alet%20a%20%3D%20new%20Mat(%5B%5B2%2C-7%5D%2C%5B4%2C5%5D%5D)%0Aprint('a%20%3D%20'%2Ba)%0A%0A%2F%2Fwell%20use%20this%20column%20vectors%0A%0Alet%20colv%20%3D%20%5B%5B2%5D%2C%5B5%5D%5D%3B%0A%0Aprint('the%20column%20vector%2C%20is%20%3A'%2Bcolv)%0A%0A%2F%2Flet's%20get%20the%20solution%2C%20which%20is%20stored%20as%20a%20column%20vector%201d%20array%0Alet%20solution%20%3D%20lusolve(a%2Ccolv)%3B%0Aprint(%22The%20solution%20is%3A%20%5Cn%22%20%2B%20solution)%0A%0A%0A%2F%2Fverify%20yourself%20using%20A*x%20%3D%3F%20b%20%0A%0Alet%20ax%20%3D%20a*solution%0Aprint('A*x%20%3D%20'%2Bax%20%2B'%5Cn'%2B'and%20b%20is%20%3A'%2Bcolv)%3B%0A%0Aprint(%22Are%20they%20equal%3F%20%22%2B%20(ax%20%3D%3D%3Dcolv))%0A%0A%2F%2FNotice%20the%20built%20in%20round%20off%20error%20acceptance%0A%0A%0A&auto_run=true"
+    width="100%"
+    height="500px">
+  </iframe>
+</Bleed>

@@ -1,0 +1,20 @@
+import Bleed from 'nextra-theme-docs/bleed'
+import Callout from 'nextra-theme-docs/callout'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `dot_multiply(input1: any[] | Mat | Tensor, input2: any[] | Mat | Tensor)`
+
+**param** `input1` first input, the first multiplicand
+
+**param** `input2` second input, the second multiplicand
+
+**returns: any[] | Mat | Tensor** - A copy of the structure multiplied **element-wise** (Note: this is not a standard multiplication of matrices), similar to dot_divide
+
+This function, similar to dot_divide, takes two structures of the same sizes, divides the elements element-wise, and returns it:
+
+<Bleed full>
+<iframe src="https://hhlab.dev/?code=*import%20math%3Adot_multiply%0A%0Alet%20a%20%3D%20%5B%5B5%2C2%5D%2C%5B3%2C0%5D%5D%3B%0Alet%20b%20%3D%20%5B%5B1%2C2%5D%2C%5B2%2C3%5D%5D%3B%0A%0Aprint('a%20%3D%20'%2Ba)%0Aprint('%5Cn')%0Aprint('b%20%3D%20'%2Bb)%0A%0A%0Aprint('%5Cn')%0Alet%20dot_mult%20%3D%20dot_multiply(a%2Cb)%0A%0Aprint('a%20%2F%20b%20(element%20wise)%20%3D%20'%2B%20dot_mult)%3B%0A%0Aprint('b%20%2F%20a%2C%20the%20reverse%20%3D%20'%2Bdot_multiply(b%2Ca))%0A%0A%2F%2FNotice%20that%20theyre%20the%20same%20as%20multiplication%20is%20commutative&auto_run=true"
+    width="100%"
+    height="500px">
+  </iframe>
+</Bleed>

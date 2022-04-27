@@ -1,0 +1,20 @@
+import Bleed from 'nextra-theme-docs/bleed'
+import Callout from 'nextra-theme-docs/callout'
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `lsolve(A: any[][], b: any[])`
+
+**param** `A` - The 'A' part of `Ax=b`. A 2d matrix, specifically **lower triangular**. See `lusolve` or `usolve` for variants.
+
+**param** `b` - The 'b' part of `Ax=b`. A 1d matrix or array, column vector specifically. 
+
+**returns: any[]** - The column vector representing the solution to the equation `Ax=b`, or the part, 'x'. 
+
+This function finds the answer to the equation `Ax=b`, or the linear equation system where x is a column vector of the different variables. 
+
+<Bleed full>
+<iframe src="https://hhlab.dev/?code=%0A*import%20math%3Alsolve%0A%0A%0A%2F%2FNote%20that%20this%20will%20not%20work%3B%20it%20is%20not%20lower%20triangular%0Alet%20a%20%3D%20new%20Mat(%5B%5B2%2C3%5D%2C%5B4%2C0%5D%5D)%0Aprint('a%20%3D%20'%2Ba)%0A%0A%2F%2Fwell%20use%20this%20column%20vector%20for%20both%20cases%0A%0Alet%20colv%20%3D%20%5B%5B2%5D%2C%5B1%5D%5D%3B%0A%0Aprint('the%20column%20vector%2C%20is%20%3A'%2Bcolv)%0A%2F%2Ftry%20un-commenting%20the%20line%20below%20and%20seeing%20what%20happens%0A%2F%2Flet%20d%20%3D%20lsolve(a%2C%20colv)%3B%0A%0Alet%20c%20%3D%20%5B%5B2%2C0%5D%2C%5B3%2C4%5D%5D%3B%0Aprint('c%20%3D%20'%2Bc)%3B%0Alet%20solution%20%3D%20lsolve(c%2Ccolv)%3B%0Aprint(%22The%20solution%20is%3A%20%5Cn%22%20%2B%20solution)%0A%0A%2F%2Fverify%20yourself%20using%20A*x%20%3D%3F%20b%20%0A%0Alet%20cx%20%3D%20c*solution%0Aprint('A*x%20%3D%20'%2Bcx%20%2B'%5Cn'%2B'and%20b%20is%20%3A'%2Bcolv)%3B%0A%0Aprint(%22Are%20they%20equal%3F%20%22%2B%20(cx%20%3D%3D%3Dcolv))%0A%0A%0A&auto_run=true"
+    width="100%"
+    height="500px">
+  </iframe>
+</Bleed>
