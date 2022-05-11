@@ -32,6 +32,7 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
@@ -63,6 +64,7 @@ const config = {
           src: 'img/hedgehog_1f994.png',
         },
         items: [
+
           {
             type: 'doc',
             docId: 'intro',
