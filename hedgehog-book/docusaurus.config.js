@@ -69,8 +69,9 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Overview',
           },
+
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/hedgehog-computing',
