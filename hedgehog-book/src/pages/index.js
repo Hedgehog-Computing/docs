@@ -22,7 +22,7 @@ function HomepageHeader() {
         </div>
 
         <p/>
-        <iframe src="https://hhlab.dev/?code=print(%20%22Hello%20Hedgehog!%20%5Cn%22%20)%0Aprint(%201%20%2B%202%20)%0Aprint(%20%5B%5B1%2C2%5D%2C%5B3%2C4%5D%5D%20%2B%20%5B%5B2%2C3%5D%2C%5B5%2C6%5D%5D%20)%0Aprint(%20%5B%5B1%2C2%5D%2C%5B3%2C4%5D%5D%20*%2010%20)&auto_run=true" width="100%" height="400" />
+        <iframe src="https://hlab.app/s/book/cover_demo" width="100%" height="300" />
         
       </div>
     </header>
