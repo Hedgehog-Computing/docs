@@ -72,6 +72,15 @@ const config = {
             label: 'Overview',
           },
 
+          {
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Overview',
+          },
+
+
+
           {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/hedgehog-computing',
@@ -96,16 +105,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/kmuBw8pRFf',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/hedgehoglabhq',
               },
             ],
           },
@@ -113,17 +118,21 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Hedgehog Lab',
+                href: 'https:hlab.app/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Github: Hedgehog Lab',
+                href: 'https://github.com/Hedgehog-Computing/hedgehog-lab',
+              },
+              {
+                label: 'GitHub: Hedgehog Computing',
+                href: 'https://github.com/Hedgehog-Computing',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Hedgehog Computing Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
