@@ -6,18 +6,18 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Hedgehog Book',
-  tagline: 'The official documentation for Hedgehog Lab',
-  url: 'https://hlab.app/',
+  title: 'My Site',
+  tagline: 'Dinosaurs are cool',
+  url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/hedgehog_1f994.ico',
+  favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Hedgehog Computing', // Usually your GitHub org/user name.
-  projectName: 'Hedgehog Book', // Usually your repo name.
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -29,13 +29,15 @@ const config = {
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      'classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          path: 'docs',
           routeBasePath: 'docs',
+          path: 'docs',
+          sidebarPath: require.resolve('./sidebars.js'),
+          lastVersion: 'current',
+          onlyIncludeVersions: ['current'],
         },
         blog: {
           showReadingTime: true,
@@ -55,40 +57,28 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Hedgehog Book',
+        title: 'My Site',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/hedgehog_1f994.png',
+          src: 'img/logo.svg',
         },
         items: [
-
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/math/intro',    // ./math/intro.md
+            label: 'Math',
             position: 'left',
-            label: 'Quickbook',
+            activeBaseRegex: `/math/`,
+            docsPluginId: 'math' // related the plugin id in this file.
           },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'HedgehogLab',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'HedgehogScript',
-          },
-          {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Plot',
-          },
+          // {
+          //   to: '/docs-system/Introducao',  // ./docs-system/Intro.md
+          //   label: 'My System',
+          //   position: 'left',
+          //   activeBaseRegex: `/docs-system/`,
+          // },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/hedgehog-computing',
+            href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -110,12 +100,16 @@ const config = {
             title: 'Community',
             items: [
               {
+                label: 'Stack Overflow',
+                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              },
+              {
                 label: 'Discord',
-                href: 'https://discord.com/invite/kmuBw8pRFf',
+                href: 'https://discordapp.com/invite/docusaurus',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/hedgehoglabhq',
+                href: 'https://twitter.com/docusaurus',
               },
             ],
           },
@@ -123,21 +117,17 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Hedgehog Lab',
-                href: 'https:hlab.app/',
+                label: 'Blog',
+                to: '/blog',
               },
               {
-                label: 'Github: Hedgehog Lab',
-                href: 'https://github.com/Hedgehog-Computing/hedgehog-lab',
-              },
-              {
-                label: 'GitHub: Hedgehog Computing',
-                href: 'https://github.com/Hedgehog-Computing',
+                label: 'GitHub',
+                href: 'https://github.com/facebook/docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Hedgehog Computing Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -146,16 +136,31 @@ const config = {
     }),
 
   plugins: [
+    /**
+     * Define the multiple docs.
+     * Example:
+     *  the math docs folder is "projectRoot/math"
+     *  so you just follow the under code.
+     */
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'Math',
+        id: 'math',
         path: 'math',
         routeBasePath: 'math',
-        sidebarPath: require.resolve('./docs/Math/sidebars.js'),
+        sidebarPath: require.resolve('./sidebars.js'),
       },
     ],
-  ]
+    // [
+    //   '@docusaurus/plugin-content-docs',
+    //   {
+    //     id: 'docs-system',
+    //     path: 'docs-system',
+    //     routeBasePath: 'docs-system',
+    //     sidebarPath: require.resolve('./sidebars.js'),
+    //   },
+    // ],
+  ],
 };
 
 module.exports = config;
