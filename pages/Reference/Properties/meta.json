@@ -1,9 +1,0 @@
-{
-    "det":"det",
-    "is_number":"is_number",
-    "is_symmetric":"is_symmetric",
-    "is_tril":"is_tril",
-    "is_triu":"is_triu",
-    "ndim":"ndim",
-    "trace":"trace"
-}
