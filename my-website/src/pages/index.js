@@ -21,6 +21,9 @@ function HomepageHeader() {
             Docusaurus Tutorial - 5min ⏱️
           </Link>
         </div>
+        <p/>
+        <iframe src="https://hlab.app/s/book/cover_demo" width="100%" height="300" />
+        <p/>
       </div>
     </header>
   );

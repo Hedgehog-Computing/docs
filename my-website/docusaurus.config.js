@@ -6,13 +6,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Hedgehog Book',
+  tagline: 'The official documentation for Hedgehog Lab',
+  url: 'https://hlab.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/hedgehog_1f994.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -57,10 +57,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Hedgehog Book',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/hedgehog_1f994.png',
         },
         items: [
           {
@@ -122,16 +122,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/kmuBw8pRFf',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/hedgehoglabhq',
               },
             ],
           },
@@ -139,17 +135,21 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Hedgehog Lab',
+                href: 'https:hlab.app/',
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Github: Hedgehog Lab',
+                href: 'https://github.com/Hedgehog-Computing/hedgehog-lab',
+              },
+              {
+                label: 'GitHub: Hedgehog Computing',
+                href: 'https://github.com/Hedgehog-Computing',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Hedgehog Computing. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,

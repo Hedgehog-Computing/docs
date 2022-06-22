@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Hedgehog Script',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        A simple, intuitive, and powerful scripting language based on JavaScript, with sweet syntax plugins for scientific computing, matrix operations, and package management.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Run in Local Browser',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Write code in Hedgehog Script, compile and run it in your local browser - also you can use the Hedgehog Cloud Functions on the cloud server for free if you want.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'No Installation, No Setup',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        You don't need to install a package before using it - just import it as <code>*import package:function</code> to use it. Also you can save and share your function as <code>*import @YOUR_USERNAME/YOUR_FUNCTION_NAME</code>
       </>
     ),
   },
