@@ -1,0 +1,23 @@
+
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `correcoef(A: a 1-d JS array, B: a 1-d JS array)`
+
+**param** `A` a 1-d JS array
+
+**param** `B` a 1-d JS array, should have the same length as `A`
+
+**returns** - a number representing the correlation coefficient of `A` and `B`
+
+If `A` and `B` are not 1-d JS array, then they will be flattened to 1-d.
+
+This function simply finds the correlation coefficient of the two inputs with the following formula:
+
+<MathJaxContext>
+      <MathJax>{"$$r = \\frac{\\sum(x_i - \\bar{x}) (y_i - \\bar{y})}{\\sqrt{\\sum(x_i - \\bar{x})^2 \\sum(y_i - \\bar{y})^2}}$$"}</MathJax>
+</MathJaxContext>
+
+<iframe src="https://hlab.app/s/LinJianan/correcoef_book"
+    width="100%"
+    height="500px">
+</iframe>
