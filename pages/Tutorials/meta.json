@@ -1,11 +1,3 @@
 {
-    "Tensors": "Tensors",
-    "Matrix-Operations":"Matrix Operations",
-    "Data-Visualization":"Data Visualization",
-    "Symbolic-Computation":"Symbolic Computation",
-    "Markdown":"Markdown",
-    "TeX":"TeX",
-    "Modules":"Modules",
-    "GPU-Acceleration":"GPU Acceleration",
-    "Share-Code-Via-URL":"Share Code Via URL & Download"
+    "Basic-Syntax": "Basic Syntax"
 }
