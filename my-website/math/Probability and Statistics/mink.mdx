@@ -7,7 +7,7 @@ import { MathJax, MathJaxContext } from 'better-react-mathjax'
 
 **param** `k` - the number of smallest elements we want to find. For example, k=2 will return a subset of the two smallest elements. (in the direction of `dim`)
 
-**param** `dim` - the direction you want to find the smallest elements for 2d matrices. Dim =1 means column and dim =2 means row. This is needed because the user may want to differentiate and only find the smallest say, 2, elements in a 3x3 matrix in the direction of columns. 
+**param** `dim` '1' | '2' - the direction you want to find the smallest elements for 2d matrices. Dim =1 means column and dim =2 means row. This is needed because the user may want to differentiate and only find the smallest say, 2, elements in a 3x3 matrix in the direction of columns. 
 
 **returns:** `any[] | Mat` - If A is a matrix, it will return a matrix whose columns or rows contain the k smallest elements of each columns or rows of A (based on the parameter `dim`), specifically returned as a Mat object. If it is a list, it'll return a list containing the k smallest elements of that list
 
