@@ -1,12 +1,12 @@
 import { MathJax, MathJaxContext } from 'better-react-mathjax'
 
-#### `reshape(input: a JS array, matrix or tensor, sizes: a 1-d array representing the size)`
+#### `reshape(input: any[] | Mat | Tensor, sizes: any[]) : any[] | Mat | Tensor`
 
-**param** `input` a JS array, matrix or tensor
+**param** `input` a JS array, matrix or tensor, the construct to reshape
 
-**param** `sizes` a 1-d array representing the size
+**param** `sizes` a 1-d array representing the size - the size is the defining feature of how to reshape
 
-**returns** - a JS array, matrix or tensor with the corresponding size
+**returns** - `any[] | Mat | Tensor` - a JS array, matrix or tensor reshaped with the corresponding size given in `sizes`
 
 size should be like [2, 2, 2] or [2, -1]. Here, -1 means automatically matching.
 

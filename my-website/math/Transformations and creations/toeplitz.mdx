@@ -3,13 +3,13 @@ import { MathJax, MathJaxContext } from 'better-react-mathjax'
 
 ##this isnt working correctly, fix toeplitz (toeplitzsquare is not a constructor)
 
-#### `name(c (optional): any[], r: any[]) : Mat`
+#### `name(c: any[], r: any[]) : Mat`
 
-**param** `c` - OPTIONAL - a 1xn matrix that defines the first column of the final matrix. This is not necessary 
+**param** `c` - OPTIONAL PARAMETER - a 1xn matrix that defines the first column of the final matrix. This is not necessary 
 
 **param** `r` - a 1xn matrix that defines the first row of the final matrix. This is necessary and defines the structure of the Toeplitz matrix. 
 
-**returns:** `any[]` - a matrix, namely the Toeplitz matrix, of size n x n, where n is the size of the parameter matrix, or rather, the length of it. 
+**returns:** `Mat` - a matrix, namely the Toeplitz matrix, of size n x n, where n is the size of the parameter matrix, or rather, the length of it. 
 
 Toeplitz matrices are matrices with entries on the diagonals all being equal (every diagonal, not just the main diagonal) Example:
   1 2 3 4 5

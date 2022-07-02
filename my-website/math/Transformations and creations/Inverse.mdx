@@ -2,11 +2,11 @@
 import { MathJax, MathJaxContext } from 'better-react-mathjax'
 
 
-#### `inv(input: Array)`
+#### `inv(input: any[] | Mat) : any[]`
 
 **param** `input` a 2d matrix. Should be square and invertible. 
 
-**returns: Array** - The matrix that is the inverse of `input` i.e. `input * input^-1 = I` where `I` is the identity matrix. (recall identity matrix is 1's on the diagonal and 0's elsewhere)
+**returns:** `any[]` - The matrix that is the inverse of `input` i.e. `input * input^-1 = I` where `I` is the identity matrix. (recall identity matrix is 1's on the diagonal and 0's elsewhere)
 
 This function simply finds the inverse of a matrix if its invertible. One test for invertible matrices is its invertible if determinant (det) =/= 0 : 
 
