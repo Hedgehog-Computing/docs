@@ -1,0 +1,14 @@
+import { MathJax, MathJaxContext } from 'better-react-mathjax'
+
+#### `iqr(input: a JS array, matrix or tensor)`
+
+**param** `input` a JS array, matrix or tensor, or a series of numbers
+
+**returns** - a number representing iqr
+
+Iqr means: firstly we find three borderline points q1, q2, q3 with quantile 0.25, 0.5, 0.75. Then we return q3 - q1
+
+<iframe src="https://hlab.app/s/LinJianan/iqr_book"
+    width="100%"
+    height="500px">
+</iframe>

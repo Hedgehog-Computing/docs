@@ -15,4 +15,4 @@ Firstly, the major thing to understand is that you need to write and learn JavaS
 ### Topics
 
 The topics we'll cover are basic JavaScript topics that you'll use while writing in Hedgehog Script. The left hand sidebar shows the topics.
-Namely - arrays, control flow, strings, variables, the Mat object, classes and functions. 
+Namely - arrays, control flow, strings, variables, the Mat object, and functions. 
